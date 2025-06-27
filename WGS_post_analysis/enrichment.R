@@ -9,7 +9,7 @@ library(org.Hs.eg.db)
 rm(list =ls())
 
 phenos <- c("Adrenal","Artery","Brain","Esophagus","Heart","Immune","Intestine","Kidney","Liver","Lung","Muscle","Pancreas","Pituitary","Salivary","Skin","Stomach","Thyroid")
-setwd('/home/data/enrichment/')
+setwd('./data/enrichment/')
 
 i = 1
 for (i in 1:17){
@@ -29,7 +29,7 @@ for (i in 1:17){
                         qvalueCutoff = 1,
                         readable = T)
   enrich.go <- data.frame(enrich.go)
-  out <- paste0('/home/result/enrichment/',phenos[i],'_enrich_GO.csv')
+  out <- paste0('./result/enrichment/',phenos[i],'_enrich_GO.csv')
   write.csv(enrich.go,out,row.names = F)
   
   ###### KEGG ######
@@ -43,7 +43,7 @@ for (i in 1:17){
                              OrgDb = "org.Hs.eg.db",
                              keyType = "ENTREZID")
   enrich.kegg <- data.frame(enrich.kegg)
-  out <- paste0('/home/result/enrichment/',phenos[i],'_enrich_KEGG.csv')
+  out <- paste0('./result/enrichment/',phenos[i],'_enrich_KEGG.csv')
   write.csv(enrich.kegg,out,row.names = F)
 }
 

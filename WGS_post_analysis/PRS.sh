@@ -4,9 +4,9 @@ pheno=$1
 
 for chr in {1..22}
 do
-Rscript /home/software/PRSice/PRSice.R \
- --prsice /home/software/PRSice/PRSice_linux \
- --base /home/data/PRS/${pheno}_chr${chr}.csv \
+Rscript ./software/PRSice/PRSice.R \
+ --prsice ./software/PRSice/PRSice_linux \
+ --base ./data/PRS/${pheno}_chr${chr}.csv \
  --snp ID \
  --chr CHROM \
  --bp GENPOS \
@@ -21,7 +21,7 @@ Rscript /home/software/PRSice/PRSice.R \
  --fastscore  \
  --bar-levels 0.00000005,0.000001,0.000005,0.00001,0.00005,0.0001,0.0005,0.001,0.005,0.01 \
  --no-regress  \
- --target /home/ukbFiles/Caucasian_chr${chrom} \
+ --target ./ukbFiles/Caucasian_chr${chrom} \
  --binary-target T \
- --out /home/result/PRS/${pheno}_chr${chr}
+ --out ./result/PRS/${pheno}_chr${chr}
 done
