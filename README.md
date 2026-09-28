@@ -151,6 +151,3 @@ To reproduce the quantitative results in the manuscript:
 2. Use the provided mask definitions and set-lists located in the `./data/` directory (if included) or generate them using the specified tools (VEP/MPH).
 3. Run the full pipeline sequentially as described in the **Demo** section for all 22 chromosomes and all phenotypes listed in the R scripts (`organ_base_filename` vector).
 
-## License
-
-This project is provided as-is for research purposes. Please cite the associated manuscript if you use this code.
